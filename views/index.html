@@ -7,11 +7,5 @@
     <canvas id="myChart" height="100"></canvas>
     <script type="x-template" id="rdserve-issue-data">{{ issues | safe }}</script>
     <script src="{{ prefix }}/dist/index.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  let vis = JSON.parse(document.getElementById('rdserve-issue-data').textContent);
-  dayChart.drawDayChart(vis);
-})
-    </script>
   </body>
 </html>
