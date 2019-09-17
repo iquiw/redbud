@@ -1,0 +1,19 @@
+{
+  "name": "redbud",
+  "version": "1.0.0",
+  "description": "Burndown chart from Redmine version",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "burndown": "git+https://github.com/iquiw/bud.git",
+    "dotenv": "^8.1.0",
+    "koa": "^2.8.1",
+    "koa-route": "^3.2.0",
+    "koa-send": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "moment": "^2.24.0",
+    "nunjucks": "^3.2.0",
+    "superagent": "^5.1.0"
+  }
+}
