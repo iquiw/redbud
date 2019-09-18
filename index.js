@@ -17,6 +17,13 @@ function isValidDate(s) {
   return s && /^\d{4}-\d{2}-\d{2}$/.test(s);
 }
 
+function setError(ctx, msg) {
+  ctx.status = 400;
+  ctx.body = {
+    error: msg
+  };
+}
+
 async function index(ctx) {
   const redmine = new Redmine(process.env['REDMINE_BASE_URL'], process.env['REDMINE_API_KEY']);
 
@@ -28,16 +35,12 @@ async function index(ctx) {
   } = ctx.request.query;
 
   if (!isValidVersion(versionId)) {
-    ctx.body = {
-      error: 'Please specify version number as "versionId".'
-    };
+    setError(ctx, 'Please specify version number as "versionId".');
     return;
   }
 
   if (!isValidDate(startDate)) {
-    ctx.body = {
-      error: 'Please specify "startDate" in YYYY-MM-DD format.'
-    };
+    setError(ctx, 'Please specify "startDate" in YYYY-MM-DD format.');
     return;
   }
 
@@ -47,9 +50,7 @@ async function index(ctx) {
   vis.dueDate = dueDate || vis.dueDate;
 
   if (!isValidDate(vis.dueDate)) {
-    ctx.body = {
-      error: 'Please specify "dueDate" in the version or as query string in YYYY-MM-DD format.'
-    };
+    setError(ctx, 'Please specify "dueDate" in the version or as query string in YYYY-MM-DD format.');
     return;
   }
 
