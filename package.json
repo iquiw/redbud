@@ -12,7 +12,7 @@
   "dependencies": {
     "burndown": "git+https://github.com/iquiw/bud.git",
     "dotenv": "^8.1.0",
-    "koa": "^2.8.1",
+    "koa": "^2.8.2",
     "koa-route": "^3.2.0",
     "koa-send": "^5.0.0",
     "koa-views": "^6.2.1",
@@ -21,7 +21,7 @@
     "superagent": "^5.1.0"
   },
   "devDependencies": {
-    "rollup": "^1.21.4",
+    "rollup": "^1.23.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   }
