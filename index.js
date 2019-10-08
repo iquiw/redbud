@@ -32,6 +32,8 @@ async function index(ctx) {
     startDate,
     endDate,
     dueDate,
+    label,
+    step,
   } = ctx.request.query;
 
   if (!isValidVersion(versionId)) {
@@ -56,6 +58,10 @@ async function index(ctx) {
 
   await ctx.render('index.html', {
     issues: JSON.stringify(vis),
+    dayChartOptions: JSON.stringify({
+      showLabel: label != '0',
+      stepSize: Number.parseInt(step, 10)
+    }),
     prefix: PATH_PREFIX
   });
 }
