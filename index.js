@@ -1,10 +1,10 @@
-const _ = require('koa-route');
-const koa = require('koa');
-const views = require('koa-views');
-const send = require('koa-send');
-const moment = require('moment');
+import _ from 'koa-route';
+import koa from 'koa';
+import views from '@ladjs/koa-views';
+import send from 'koa-send';
+import moment from 'moment';
 
-const Redmine = require('./lib/redmine');
+import { Redmine } from './lib/redmine.js';
 
 const PATH_PREFIX = process.env['REDBUD_PATH_PREFIX'] || '';
 const PORT = process.env['REDBUD_PORT'] || '3000';
