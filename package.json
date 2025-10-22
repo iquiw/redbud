@@ -14,7 +14,7 @@
     "@ladjs/koa-views": "^9.0.0",
     "burndown": "git+https://github.com/iquiw/bud.git",
     "dotenv": "^17.2.0",
-    "koa": "^3.0.1",
+    "koa": "^3.0.3",
     "koa-route": "^4.0.1",
     "koa-send": "^5.0.1",
     "moment": "^2.30.1",
