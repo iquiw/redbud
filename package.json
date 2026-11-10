@@ -13,17 +13,17 @@
   "dependencies": {
     "@ladjs/koa-views": "^9.0.0",
     "burndown": "git+https://github.com/iquiw/bud.git",
-    "dotenv": "^17.3.1",
-    "koa": "^3.1.2",
+    "dotenv": "^18.0.10",
+    "koa": "^3.3.0",
     "koa-route": "^4.0.1",
     "koa-send": "^5.0.1",
     "moment": "^2.31.0",
     "nunjucks": "^3.2.4",
-    "superagent": "^10.3.0"
+    "superagent": "^10.4.2"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
-    "rollup": "^4.59.0"
+    "rollup": "^4.68.2"
   }
 }
